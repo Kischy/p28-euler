@@ -1,5 +1,5 @@
-mod spiral_diagonal_numbers;
-use spiral_diagonal_numbers::SpiralsDiagonalNumbers;
+mod spirals_diagonal_numbers;
+use spirals_diagonal_numbers::SpiralsDiagonalNumbers;
 
 fn main() {
     println!("Calculation started");
