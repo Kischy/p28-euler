@@ -1,4 +1,3 @@
-#[derive(Debug)]
 pub struct SpiralsDiagonalNumbers {
     max_square_width_height: u16,
     current_diagonal_num: u128,
