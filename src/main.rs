@@ -2,8 +2,13 @@ mod spiral_diagonal_numbers;
 use spiral_diagonal_numbers::SpiralsDiagonalNumbers;
 
 fn main() {
-    let sdn = SpiralsDiagonalNumbers::new(5);
-    for dn in sdn {
-        println!(" {} ", dn);
-    }
+    println!("Calculation started");
+    let sdn = SpiralsDiagonalNumbers::new(1001);
+
+    let answer_p28: u128 = sdn.sum();
+
+    println!(
+        "The answer to problem 28 of project Euler is {}.",
+        answer_p28
+    );
 }

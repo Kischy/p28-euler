@@ -11,7 +11,7 @@ impl SpiralsDiagonalNumbers {
         Self {
             max_square_width_height,
             current_diagonal_num: 0,
-            current_square_size: 1,
+            current_square_size: 0,
             index_of_diagonal_number_in_square: 0,
         }
     }
@@ -30,6 +30,7 @@ impl SpiralsDiagonalNumbers {
             self.current_diagonal_num += self.current_square_size as u128 - 1;
         } else {
             self.current_diagonal_num = 1;
+            self.current_square_size = 1;
             self.index_of_diagonal_number_in_square = 4;
         }
     }
@@ -40,7 +41,7 @@ impl Iterator for SpiralsDiagonalNumbers {
 
     fn next(&mut self) -> Option<Self::Item> {
         self.update_diagonal_number();
-        if self.last_number_reached() == false {            
+        if self.last_number_reached() == false {
             Some(self.current_diagonal_num)
         } else {
             None
